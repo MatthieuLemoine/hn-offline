@@ -33,6 +33,7 @@
     "pretty-check": "prettier-eslint \"**/*.js*\" --list-different  --config .prettierrc"
   },
   "dependencies": {
+    "chalk": "^2.4.1",
     "date-fns": "^1.29.0",
     "express": "^4.16.4",
     "googleapis": "^35.0.0",

@@ -1,4 +1,4 @@
-# hn-offline
+# hn-offline [![CircleCI](https://circleci.com/gh/MatthieuLemoine/hn-offline/tree/master.svg?style=svg)](https://circleci.com/gh/MatthieuLemoine/hn-offline/tree/master)
 
 Access Hacker News Digest's articles even when you're offline.
 
