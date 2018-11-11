@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    ["lodash", { "id": ["recompose", "ramda"] }],
+    ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }]
+  ],
+  "presets": ["module:metro-react-native-babel-preset"]
+}

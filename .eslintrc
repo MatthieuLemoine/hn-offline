@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": 0,
+    "no-underscore-dangle": 0,
+    "react/no-array-index-key": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["next.config.js"] }],
+    "jsx-a11y/accessible-emoji": 0,
+    "camelcase": 0
+  }
+}
