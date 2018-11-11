@@ -41,9 +41,12 @@
     "ramda": "^0.25.0",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
+    "recompose": "^0.30.0",
     "request": "^2.88.0",
+    "rn-fetch-blob": "^0.10.13",
     "scrape-it": "^5.1.0",
-    "styled-components": "^4.0.3"
+    "styled-components": "^4.0.3",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",

@@ -1,6 +1,7 @@
 const scrape = require('scrape-it');
 const { format } = require('date-fns');
 const { omit } = require('ramda');
+const uuid = require('uuid/v4');
 
 const letters = /[A-Za-z]/;
 const withoutInfo = omit(['info']);
@@ -40,6 +41,7 @@ module.exports = (html) => {
         !letters.test(item.info.points) &&
         !letters.test(item.info.comments))
     .map(item => ({
+      id: uuid(),
       ...withoutInfo(item),
       ...item.info,
     }));
