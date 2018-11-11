@@ -81,7 +81,6 @@ Articles.propTypes = {
     points: PropTypes.string.isRequired,
   })).isRequired,
   fetchLastDigest: PropTypes.func.isRequired,
-  deleteArticle: PropTypes.func.isRequired,
   deleteAll: PropTypes.func.isRequired,
 };
 
