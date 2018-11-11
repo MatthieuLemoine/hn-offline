@@ -30,7 +30,8 @@
     "test": "jest",
     "lint": "eslint .",
     "prettify": "prettier-eslint --write \"**/*.js*\" --list-different  --config .prettierrc",
-    "pretty-check": "prettier-eslint \"**/*.js*\" --list-different  --config .prettierrc"
+    "pretty-check": "prettier-eslint \"**/*.js*\" --list-different  --config .prettierrc",
+    "build": "echo true"
   },
   "dependencies": {
     "chalk": "^2.4.1",
