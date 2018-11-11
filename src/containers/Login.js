@@ -9,9 +9,10 @@ import {
 } from 'recompose';
 import { prop } from 'ramda';
 import { Redirect } from 'react-router-native';
+import { Linking } from 'react-native';
 import Loading from '../components/Loading';
 
-import Application from '../components/Application';
+import Login from '../components/Login';
 import { getAuthUrl, getTokens } from '../api';
 import { saveTokens, getTokens as getStoredTokens } from '../storage';
 
@@ -21,6 +22,7 @@ export default compose(
   withState('tokens', 'setTokens', null),
   withState('code', 'setCode', ''),
   withHandlers({
+    openBrowser: ({ authUrl }) => () => Linking.openURL(authUrl),
     submitCode: props => async () => {
       try {
         const tokens = await getTokens(props.code);
@@ -55,4 +57,4 @@ export default compose(
       renderComponent(Redirect),
     ),
   ),
-)(Application);
+)(Login);
