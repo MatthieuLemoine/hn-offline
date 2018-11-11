@@ -1,30 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+import { Route, NativeRouter, Switch, BackButton } from 'react-router-native';
+import Articles from '../../containers/Articles';
+import Article from '../../containers/Article';
+import Login from '../../containers/Login';
 
 const Application = () => (
-  <View style={styles.container}>
-    <Text style={styles.welcome}>Welcome to React Native!</Text>
-    <Text style={styles.instructions}>To get started, edit App.js</Text>
-  </View>
+  <NativeRouter>
+    <BackButton>
+      <Switch>
+        <Route path="/articles" component={Articles} />
+        <Route path="/article/:id" component={Article} />
+        <Route path="/login" component={Login} />
+        <Route component={Articles} />
+      </Switch>
+    </BackButton>
+  </NativeRouter>
 );
+
+Application.propTypes = {};
 
 export default Application;
